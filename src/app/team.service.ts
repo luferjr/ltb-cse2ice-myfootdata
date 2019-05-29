@@ -7,12 +7,17 @@ import { map, catchError, tap } from 'rxjs/operators';
 import { Team } from './team'
 import { Standing } from './standing'
 
+const httpOptionsA = {
+	headers: new HttpHeaders ({
+		'X-Auth-Token': 'ADD-YOUR-FOOTBALL-DATA-API-TOKEN'
+	})
+};
 
 @Injectable()
 export class TeamService {
 
   private teamsUrl = 'assets/api/teams.json'; // URL to web api
-  private standingsUrl = 'assets/api/standing.json'
+  private standingsUrl = 'http://api.football-data.org/v2/competitions/2014/standings' //'assets/api/standing.json'
   
   constructor(private http: HttpClient) {}
 
@@ -24,7 +29,7 @@ export class TeamService {
   }
 
   getStandings(): Observable<Standing[]>{
-    return this.http.get<Standing[]>(this.standingsUrl)
+    return this.http.get<Standing[]>(this.standingsUrl, httpOptionsA)
   }
 
 }
