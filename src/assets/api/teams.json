@@ -1,0 +1,16 @@
+{
+  "teams": [
+    {
+      "id": "346",
+      "name": "Leicester City",
+      "shortName": "Foxes",
+      "crestURL": "http://upload.wikimedia.org/wikipedia/en/6/63/Leicester02.png"
+    },
+    {
+      "id": "394",
+      "name": "Crystal Palace",
+      "shortName": "Crystal",
+      "crestURL": "http://upload.wikimedia.org/wikipedia/de/b/bf/Crystal_Palace_F.C._logo_(2013).png"
+    }
+  ]
+}

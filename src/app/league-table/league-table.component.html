@@ -1,0 +1,14 @@
+<div id="LeagueTableDiv">
+
+  <h2>League Table</h2>
+  
+  <ul>
+    <li class="items" *ngFor="let standing of standings.standings">
+      {{standing.stage}}
+      <div *ngFor="let table of standing.table">
+        {{table.position}} - {{table.team.name}}
+      </div>
+    </li>
+  </ul>
+
+</div>

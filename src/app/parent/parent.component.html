@@ -1,0 +1,13 @@
+<div id="ParentDiv">
+
+<h2>My Teams</h2>
+
+<ul>
+  <li class="items" *ngFor="let team of teams.teams" (click)="onSelect(team)">
+    <span>{{team.id}}</span> {{team.shortName}}
+  </li>
+</ul>
+
+
+<app-child [team]="selectedTeam"></app-child>
+</div>
